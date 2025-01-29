@@ -19,6 +19,9 @@
       beast.remove();
     }
   }
+  if (typeof browser === "undefined") {
+    var browser = chrome;
+  }
 
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "beastify") {
